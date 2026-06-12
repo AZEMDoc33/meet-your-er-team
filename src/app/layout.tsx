@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     "Meet the emergency physicians and physician assistants of Banner Gateway Medical Center in Gilbert, AZ, and learn what to expect during your visit.",
   openGraph: {
     siteName: "Meet Your ER Team",
-    images: ["/images/hero-gateway.jpg"],
+    images: ["/photos/hero-background.png"],
     type: "website",
   },
   icons: { icon: "/favicon.svg" },

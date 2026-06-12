@@ -16,7 +16,7 @@ export default function Hero() {
     <section
       ref={ref}
       className="relative flex items-end bg-ink overflow-hidden
-                 min-h-svh
+                 min-h-[78svh] sm:min-h-[84svh]
                  md:min-h-0 md:aspect-[16/9]"
     >
       <motion.div
@@ -27,15 +27,15 @@ export default function Hero() {
         transition={{ duration: 2.2, ease: [0.22, 1, 0.36, 1] }}
       >
         <Image
-          src="/images/hero-background.png"
+          src="/photos/hero-background.png"
           alt="A physician examining a young patient — compassionate care at Banner Gateway Emergency Department"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-[58%_center] sm:object-center"
           sizes="100vw"
         />
       </motion.div>
-      <div className="absolute inset-0 bg-gradient-to-b from-ink/20 via-ink/5 to-[#212D29]/85" />
+      <div className="absolute inset-0 bg-gradient-to-b from-ink/60 via-ink/35 to-[#18221f]/90 md:from-ink/35 md:via-ink/10 md:to-[#212D29]/85" />
 
       <motion.div
         style={{ opacity: fade }}
@@ -80,7 +80,7 @@ export default function Hero() {
           transition={{ delay: 1.2, duration: 0.7 }}
           className="mt-6"
         >
-          
+          <a
             href="https://myervisit.com/blog"
             target="_blank"
             rel="noopener noreferrer"
