@@ -11,6 +11,7 @@ const RESOURCES = [
   { href: "/your-visit", t: "What happens during your visit", d: "The 5 stages of emergency care, explained.", cta: "Read" },
   { href: "/faq", t: "Understanding wait times", d: "Why emergency departments work the way they do, and what your wait actually means.", cta: "Read" },
   { href: "/faq", t: "After your visit", d: "Discharge instructions, follow up care, and the warning signs that should bring you back.", cta: "Read" },
+  { href: "https://account.bannerhealth.com/sign-in", t: "Banner Portal Access", d: "Get immediate access to your labs and imaging through your Banner Health account.", cta: "Visit Banner Health" },
   { href: "https://www.bannerhealth.com/patients/medical-records", t: "Medical records", d: "Request copies of your visit records through Banner Health.", cta: "Visit Banner Health" },
   { href: "https://www.bannerhealth.com/patients/billing", t: "Billing questions", d: "Understand your hospital and physician bills and who to contact.", cta: "Visit Banner Health" },
   { href: "/contact", t: "Hospital services & directions", d: "Location, parking, and contact information for Banner Gateway Medical Center.", cta: "Read" },
