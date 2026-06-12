@@ -123,8 +123,8 @@ export default async function ProviderProfile({ params }: { params: Promise<{ sl
             )}
 
             <p className="mt-9">
-              <Link className="btn-primary" href={`/feedback?provider=${encodeURIComponent(p.name)}`}>
-                &#9825;&nbsp; Recognize {p.name.split(",")[0]}
+              <Link className="btn-primary" href="/feedback">
+                &#9825;&nbsp; Patient feedback
               </Link>
             </p>
           </Reveal>

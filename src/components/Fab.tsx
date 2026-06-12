@@ -15,7 +15,7 @@ export default function Fab() {
     >
       <Link
         href="/feedback"
-        aria-label="Share feedback"
+        aria-label="Patient feedback"
         className="inline-flex items-center gap-2 bg-saguaro text-white no-underline rounded-full px-5 py-3.5 min-h-[52px] font-semibold text-[15px] shadow-lift hover:bg-saguaro-deep hover:-translate-y-0.5 transition-all"
       >
         <svg viewBox="0 0 24 24" className="w-[18px] h-[18px] fill-copper-soft" aria-hidden>

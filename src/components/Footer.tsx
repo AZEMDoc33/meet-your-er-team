@@ -33,7 +33,7 @@ export default function Footer() {
           <h3 className="font-display text-canvas text-[19px] mb-3">For patients</h3>
           <ul className="space-y-1.5">
             <li><Link className="text-copper-soft no-underline hover:underline" href="/resources">Patient resources</Link></li>
-            <li><Link className="text-copper-soft no-underline hover:underline" href="/feedback">Share feedback</Link></li>
+            <li><Link className="text-copper-soft no-underline hover:underline" href="/feedback">Patient feedback</Link></li>
             <li><Link className="text-copper-soft no-underline hover:underline" href="/contact">Contact &amp; directions</Link></li>
           </ul>
         </div>

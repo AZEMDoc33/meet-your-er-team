@@ -73,7 +73,7 @@ export default function Hero() {
           Providing expert emergency care with compassion, communication, and teamwork.
         </motion.p>
 
-        {/* ED Insights CTA */}
+        {/* Clinical blog CTA */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -93,12 +93,12 @@ export default function Hero() {
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
               <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
-            ED Insights from Dr. Cummins
+            Clinical Blog by Dr. Cummins
           </a>
         </motion.div>
 
         {/* Visit journey line */}
-        <div className="mt-9 max-w-[340px]" aria-hidden>
+        <div className="mt-9 w-full max-w-[720px]" aria-hidden>
           <div className="relative h-[2px] bg-canvas/25 rounded">
             <motion.span
               className="absolute left-0 top-0 h-full bg-copper-soft rounded"
@@ -121,7 +121,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 2.3, duration: 0.6 }}
-            className="block mt-2.5 text-canvas/70 text-[12px] tracking-[.08em]"
+            className="block mt-2.5 whitespace-nowrap text-canvas/70 text-[10px] min-[380px]:text-[11px] sm:text-[12px] tracking-[.04em] sm:tracking-[.08em]"
           >
             {STAGES.join("  ·  ")}
           </motion.small>

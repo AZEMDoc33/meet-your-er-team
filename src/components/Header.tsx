@@ -9,6 +9,7 @@ const NAV = [
   { href: "/team", label: "Our Providers" },
   { href: "/your-visit", label: "Your Visit" },
   { href: "/resources", label: "Resources" },
+  { href: "https://myervisit.com/blog", label: "Blog", external: true },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
 ];
@@ -54,16 +55,28 @@ export default function Header() {
 
         <nav aria-label="Main" className="hidden min-[880px]:flex gap-8 items-center">
           {NAV.map((n) => (
-            <Link
-              key={n.href}
-              href={n.href}
-              aria-current={pathname === n.href ? "page" : undefined}
-              className={`no-underline font-medium text-[15.5px] pb-1 border-b-2 transition-colors ${tone} ${
-                pathname === n.href ? "border-copper" : "border-transparent hover:border-copper"
-              }`}
-            >
-              {n.label}
-            </Link>
+            n.external ? (
+              <a
+                key={n.href}
+                href={n.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`no-underline font-medium text-[15.5px] pb-1 border-b-2 border-transparent transition-colors hover:border-copper ${tone}`}
+              >
+                {n.label}
+              </a>
+            ) : (
+              <Link
+                key={n.href}
+                href={n.href}
+                aria-current={pathname === n.href ? "page" : undefined}
+                className={`no-underline font-medium text-[15.5px] pb-1 border-b-2 transition-colors ${tone} ${
+                  pathname === n.href ? "border-copper" : "border-transparent hover:border-copper"
+                }`}
+              >
+                {n.label}
+              </Link>
+            )
           ))}
         </nav>
 
@@ -96,15 +109,26 @@ export default function Header() {
             >
               {[...NAV, { href: "/feedback", label: "Feedback" }].map((n) => (
                 <motion.div key={n.href} variants={{ hidden: { opacity: 0, x: -18 }, show: { opacity: 1, x: 0 } }}>
-                  <Link
-                    href={n.href}
-                    aria-current={pathname === n.href ? "page" : undefined}
-                    className={`block font-display text-[clamp(28px,6vw,36px)] no-underline py-3 border-b border-canvas/10 ${
-                      pathname === n.href ? "text-copper-soft" : "text-canvas"
-                    }`}
-                  >
-                    {n.label}
-                  </Link>
+                  {n.external ? (
+                    <a
+                      href={n.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block font-display text-[clamp(28px,6vw,36px)] no-underline py-3 border-b border-canvas/10 text-canvas"
+                    >
+                      {n.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={n.href}
+                      aria-current={pathname === n.href ? "page" : undefined}
+                      className={`block font-display text-[clamp(28px,6vw,36px)] no-underline py-3 border-b border-canvas/10 ${
+                        pathname === n.href ? "text-copper-soft" : "text-canvas"
+                      }`}
+                    >
+                      {n.label}
+                    </Link>
+                  )}
                 </motion.div>
               ))}
               <motion.p

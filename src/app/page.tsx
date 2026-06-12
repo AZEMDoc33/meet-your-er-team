@@ -124,12 +124,12 @@ export default function Home() {
           <span className="eyebrow">We want to hear from you</span>
           <h2 className="font-display text-[clamp(27px,4.5vw,40px)]">How was your experience?</h2>
           <p className="lede mx-auto mt-4">
-            Recognize a physician, nurse, or team member who made a difference, or tell us how we can do better.
-            Your feedback goes directly to our department leadership.
+            Your patient experience survey helps us understand what went well and where we need to improve.
+            Honest feedback helps us make care better for the next patient.
           </p>
           <p className="mt-7">
             <Link className="btn-primary" href="/feedback">
-              Share feedback
+              Learn about feedback
             </Link>
           </p>
         </Reveal>
