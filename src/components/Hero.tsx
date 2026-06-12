@@ -27,7 +27,7 @@ export default function Hero() {
         transition={{ duration: 2.2, ease: [0.22, 1, 0.36, 1] }}
       >
         <Image
-          src="/images/hero.background.png"
+          src="/images/hero-background.png"
           alt="A physician examining a young patient — compassionate care at Banner Gateway Emergency Department"
           fill
           priority
