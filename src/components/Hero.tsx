@@ -73,30 +73,6 @@ export default function Hero() {
           Providing expert emergency care with compassion, communication, and teamwork.
         </motion.p>
 
-        {/* Clinical blog CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2, duration: 0.7 }}
-          className="mt-6"
-        >
-          <a
-            href="https://myervisit.com/blog"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full
-                       border border-copper-soft/60 text-copper-soft
-                       text-[13.5px] tracking-[.08em] uppercase font-sans
-                       hover:bg-copper-soft/10 transition-colors duration-200
-                       no-underline"
-          >
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-              <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-            Clinical Blog by Dr. Cummins
-          </a>
-        </motion.div>
-
         {/* Visit journey line */}
         <div className="mt-9 w-full max-w-[720px]" aria-hidden>
           <div className="relative h-3">
@@ -133,21 +109,6 @@ export default function Hero() {
           </motion.div>
         </div>
       </motion.div>
-
-      <motion.a
-        href="#welcome"
-        className="absolute bottom-4 left-1/2 -translate-x-1/2 z-[2] text-canvas/75 text-[12px] tracking-[.14em] uppercase no-underline flex flex-col items-center gap-1.5"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2.5 }}
-      >
-        Scroll
-        <motion.span
-          className="w-px h-7 bg-gradient-to-b from-copper-soft to-transparent"
-          animate={{ opacity: [0.4, 1, 0.4] }}
-          transition={{ duration: 1.8, repeat: Infinity }}
-        />
-      </motion.a>
     </section>
   );
 }

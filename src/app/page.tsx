@@ -121,16 +121,15 @@ export default function Home() {
 
       <section className="bg-sand py-[clamp(56px,9vw,104px)]">
         <Reveal className="wrap text-center">
-          <span className="eyebrow">We want to hear from you</span>
-          <h2 className="font-display text-[clamp(27px,4.5vw,40px)]">How was your experience?</h2>
+          <span className="eyebrow">Clinical blog</span>
+          <h2 className="font-display text-[clamp(27px,4.5vw,40px)]">Clinical Blog by Dr. Cummins</h2>
           <p className="lede mx-auto mt-4">
-            Your patient experience survey helps us understand what went well and where we need to improve.
-            Honest feedback helps us make care better for the next patient.
+            Honest, plain-language answers to what patients actually want to know &mdash; with a milliliter of humor.
           </p>
           <p className="mt-7">
-            <Link className="btn-primary" href="/feedback">
-              Learn about feedback
-            </Link>
+            <a className="btn-primary" href="https://myervisit.com/blog" target="_blank" rel="noopener noreferrer">
+              Read the blog
+            </a>
           </p>
         </Reveal>
       </section>
