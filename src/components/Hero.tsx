@@ -99,32 +99,38 @@ export default function Hero() {
 
         {/* Visit journey line */}
         <div className="mt-9 w-full max-w-[720px]" aria-hidden>
-          <div className="relative h-[2px] bg-canvas/25 rounded">
+          <div className="relative h-3">
+            <span className="absolute left-[10%] right-[10%] top-1/2 h-[2px] -translate-y-1/2 bg-canvas/25 rounded" />
             <motion.span
-              className="absolute left-0 top-0 h-full bg-copper-soft rounded"
-              initial={{ width: 0 }}
-              animate={{ width: "100%" }}
+              className="absolute left-[10%] right-[10%] top-1/2 h-[2px] -translate-y-1/2 origin-left bg-copper-soft rounded"
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
               transition={{ delay: 1.3, duration: 1.1, ease: "easeOut" }}
             />
-            {STAGES.map((_, i) => (
-              <motion.span
-                key={i}
-                className="absolute top-1/2 w-2 h-2 rounded-full bg-copper-soft"
-                style={{ left: `${(i / (STAGES.length - 1)) * 100}%`, x: "-50%", y: "-50%" }}
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: 1.35 + i * 0.22, type: "spring", stiffness: 400, damping: 18 }}
-              />
-            ))}
+            <div className="relative z-[1] grid grid-cols-5 h-full items-center">
+              {STAGES.map((stage, i) => (
+                <motion.span
+                  key={stage}
+                  className="mx-auto w-2 h-2 rounded-full bg-copper-soft"
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ delay: 1.35 + i * 0.22, type: "spring", stiffness: 400, damping: 18 }}
+                />
+              ))}
+            </div>
           </div>
-          <motion.small
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 2.3, duration: 0.6 }}
-            className="block mt-2.5 whitespace-nowrap text-canvas/70 text-[10px] min-[380px]:text-[11px] sm:text-[12px] tracking-[.04em] sm:tracking-[.08em]"
+            className="mt-2.5 grid grid-cols-5 text-canvas/70 text-[8px] min-[380px]:text-[9px] sm:text-[11px] md:text-[12px] tracking-[.02em] sm:tracking-[.05em] md:tracking-[.08em]"
           >
-            {STAGES.join("  ·  ")}
-          </motion.small>
+            {STAGES.map((stage) => (
+              <small key={stage} className="block text-center whitespace-nowrap">
+                {stage}
+              </small>
+            ))}
+          </motion.div>
         </div>
       </motion.div>
 

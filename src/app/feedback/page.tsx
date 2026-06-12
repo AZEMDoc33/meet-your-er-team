@@ -11,10 +11,10 @@ export default function Feedback() {
   return (
     <>
       <section className="pt-[clamp(96px,14vh,140px)] pb-[clamp(32px,5vw,48px)]">
-        <Reveal className="wrap">
+        <Reveal className="wrap text-center">
           <span className="eyebrow">Feedback</span>
           <h1 className="font-display text-[clamp(32px,5.5vw,48px)]">We want to hear from you</h1>
-          <p className="lede mt-4">
+          <p className="lede mt-4 mx-auto">
             Your feedback helps us improve emergency care for every patient and family who comes through our doors.
           </p>
         </Reveal>
@@ -28,7 +28,7 @@ export default function Feedback() {
       <section className="py-[clamp(48px,7vw,72px)]">
         <div className="wrap">
           <Reveal>
-            <div className="max-w-[760px] bg-white rounded-card shadow-card p-7 sm:p-9">
+            <div className="max-w-[760px] mx-auto bg-white rounded-card shadow-card p-7 sm:p-9 text-center">
               <h2 className="font-display text-[clamp(25px,4vw,34px)]">Please complete your patient experience survey</h2>
               <p className="mt-4 text-ink-soft">
                 We appreciate all feedback, both positive and negative. We are working every day to make our
