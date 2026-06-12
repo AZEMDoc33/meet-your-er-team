@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-canvas text-ink font-body text-[18px] leading-[1.65] antialiased; }
+  ::selection { @apply bg-sand-deep; }
+  :focus-visible { outline: 2px solid #B5722F; outline-offset: 3px; border-radius: 4px; }
+}
+
+@layer components {
+  .wrap { @apply max-w-site mx-auto px-5 sm:px-8 lg:px-10; }
+  .eyebrow { @apply block text-[13px] font-semibold tracking-[.1em] uppercase text-copper mb-3.5; }
+  .lede { @apply text-ink-soft text-[19px] sm:text-[21px] max-w-[640px]; }
+  .btn { @apply inline-flex items-center justify-center gap-2 min-h-[48px] px-7 py-3 rounded-full font-semibold text-[16px] no-underline transition-all duration-200; }
+  .btn-primary { @apply btn bg-saguaro text-white hover:bg-saguaro-deep hover:-translate-y-px hover:shadow-lift; }
+  .btn-ghost { @apply btn bg-transparent text-saguaro border-[1.5px] border-saguaro hover:bg-saguaro hover:text-white; }
+  .btn-light { @apply btn bg-canvas text-saguaro hover:-translate-y-px hover:shadow-lift; }
+  .text-link { @apply font-semibold text-saguaro no-underline border-b-2 border-copper pb-0.5 hover:text-copper transition-colors; }
+  .chip { @apply bg-sand rounded-full px-4 py-2 text-[15px] font-medium; }
+  .callout { @apply bg-sky/15 border-l-[3px] border-sky rounded-r-xl px-5 py-4 text-[16px] text-ink-soft max-w-[760px]; }
+}
