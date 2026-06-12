@@ -36,6 +36,11 @@ export default function About() {
             conditions, and in sorting the serious from the safe when symptoms could be either.
           </p>
           <p className="mt-3.5 max-w-[680px]">
+            Every emergency physician at Banner Gateway is board certified in emergency medicine. This credential is
+            required to practice here, and it reflects the training and judgment patients should expect in an
+            emergency department.
+          </p>
+          <p className="mt-3.5 max-w-[680px]">
             When you visit, our first job is to answer one question: is something dangerous happening? That is why
             your visit may include tests, monitoring, and periods of waiting while results process. Everything we
             do is aimed at making sure you leave with the right diagnosis and the right plan.
