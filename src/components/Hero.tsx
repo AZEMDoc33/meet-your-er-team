@@ -13,7 +13,12 @@ export default function Hero() {
   const fade = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
 
   return (
-    <section ref={ref} className="relative min-h-svh flex items-end bg-ink overflow-hidden">
+    <section
+      ref={ref}
+      className="relative flex items-end bg-ink overflow-hidden
+                 min-h-svh
+                 md:min-h-0 md:aspect-[16/9]"
+    >
       <motion.div
         className="absolute inset-0"
         style={{ y: yImg }}
@@ -22,17 +27,20 @@ export default function Hero() {
         transition={{ duration: 2.2, ease: [0.22, 1, 0.36, 1] }}
       >
         <Image
-          src="/images/hero-gateway.jpg"
-          alt="Banner Gateway Medical Center at dusk, with the emergency entrance sign lit"
+          src="/images/hero-background.jpg"
+          alt="A physician examining a young patient — compassionate care at Banner Gateway Emergency Department"
           fill
           priority
-          className="object-cover object-[center_30%]"
+          className="object-cover object-center"
           sizes="100vw"
         />
       </motion.div>
-      <div className="absolute inset-0 bg-gradient-to-b from-ink/35 via-ink/5 to-[#212D29]/80" />
+      <div className="absolute inset-0 bg-gradient-to-b from-ink/20 via-ink/5 to-[#212D29]/85" />
 
-      <motion.div style={{ opacity: fade }} className="relative z-[2] w-full max-w-site mx-auto px-5 sm:px-8 lg:px-10 pb-[clamp(56px,10vh,96px)]">
+      <motion.div
+        style={{ opacity: fade }}
+        className="relative z-[2] w-full max-w-site mx-auto px-5 sm:px-8 lg:px-10 pb-[clamp(56px,10vh,96px)]"
+      >
         <motion.p
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
@@ -64,6 +72,30 @@ export default function Hero() {
         >
           Providing expert emergency care with compassion, communication, and teamwork.
         </motion.p>
+
+        {/* ED Insights CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.2, duration: 0.7 }}
+          className="mt-6"
+        >
+          
+            href="https://myervisit.com/blog"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full
+                       border border-copper-soft/60 text-copper-soft
+                       text-[13.5px] tracking-[.08em] uppercase font-sans
+                       hover:bg-copper-soft/10 transition-colors duration-200
+                       no-underline"
+          >
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            ED Insights from Dr. Cummins
+          </a>
+        </motion.div>
 
         {/* Visit journey line */}
         <div className="mt-9 max-w-[340px]" aria-hidden>
