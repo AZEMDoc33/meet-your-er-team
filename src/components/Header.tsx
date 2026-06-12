@@ -9,7 +9,7 @@ const NAV = [
   { href: "/team", label: "Our Providers" },
   { href: "/your-visit", label: "Your Visit" },
   { href: "/resources", label: "Resources" },
-  { href: "https://myervisit.com/blog", label: "Blog", external: true },
+  { href: "/community-resources", label: "Community Resources" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
 ];
@@ -53,35 +53,23 @@ export default function Header() {
           </small>
         </Link>
 
-        <nav aria-label="Main" className="hidden min-[880px]:flex gap-8 items-center">
+        <nav aria-label="Main" className="hidden min-[1100px]:flex gap-6 items-center">
           {NAV.map((n) => (
-            n.external ? (
-              <a
-                key={n.href}
-                href={n.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`no-underline font-medium text-[15.5px] pb-1 border-b-2 border-transparent transition-colors hover:border-copper ${tone}`}
-              >
-                {n.label}
-              </a>
-            ) : (
-              <Link
-                key={n.href}
-                href={n.href}
-                aria-current={pathname === n.href ? "page" : undefined}
-                className={`no-underline font-medium text-[15.5px] pb-1 border-b-2 transition-colors ${tone} ${
-                  pathname === n.href ? "border-copper" : "border-transparent hover:border-copper"
-                }`}
-              >
-                {n.label}
-              </Link>
-            )
+            <Link
+              key={n.href}
+              href={n.href}
+              aria-current={pathname === n.href ? "page" : undefined}
+              className={`no-underline font-medium text-[15.5px] pb-1 border-b-2 transition-colors ${tone} ${
+                pathname === n.href ? "border-copper" : "border-transparent hover:border-copper"
+              }`}
+            >
+              {n.label}
+            </Link>
           ))}
         </nav>
 
         <button
-          className="min-[880px]:hidden w-12 h-12 flex flex-col items-center justify-center gap-[5px] relative z-[111]"
+          className="min-[1100px]:hidden w-12 h-12 flex flex-col items-center justify-center gap-[5px] relative z-[111]"
           aria-expanded={open}
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen(!open)}
@@ -100,40 +88,29 @@ export default function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-[105] bg-saguaro-deep flex flex-col justify-center px-7"
+            className="fixed inset-0 z-[105] bg-saguaro-deep flex flex-col justify-center px-7 overflow-y-auto"
           >
             <motion.div
               initial="hidden"
               animate="show"
               variants={{ show: { transition: { staggerChildren: 0.06, delayChildren: 0.08 } } }}
             >
-              {[...NAV, { href: "/feedback", label: "Feedback" }].map((n) => (
+              {NAV.map((n) => (
                 <motion.div key={n.href} variants={{ hidden: { opacity: 0, x: -18 }, show: { opacity: 1, x: 0 } }}>
-                  {n.external ? (
-                    <a
-                      href={n.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block font-display text-[clamp(28px,6vw,36px)] no-underline py-3 border-b border-canvas/10 text-canvas"
-                    >
-                      {n.label}
-                    </a>
-                  ) : (
-                    <Link
-                      href={n.href}
-                      aria-current={pathname === n.href ? "page" : undefined}
-                      className={`block font-display text-[clamp(28px,6vw,36px)] no-underline py-3 border-b border-canvas/10 ${
-                        pathname === n.href ? "text-copper-soft" : "text-canvas"
-                      }`}
-                    >
-                      {n.label}
-                    </Link>
-                  )}
+                  <Link
+                    href={n.href}
+                    aria-current={pathname === n.href ? "page" : undefined}
+                    className={`block font-display text-[clamp(25px,5.5vw,34px)] no-underline py-2.5 border-b border-canvas/10 ${
+                      pathname === n.href ? "text-copper-soft" : "text-canvas"
+                    }`}
+                  >
+                    {n.label}
+                  </Link>
                 </motion.div>
               ))}
               <motion.p
                 variants={{ hidden: { opacity: 0 }, show: { opacity: 1 } }}
-                className="mt-7 text-[15px] text-sky"
+                className="mt-6 text-[15px] text-sky"
               >
                 Banner Gateway Medical Center
                 <br />

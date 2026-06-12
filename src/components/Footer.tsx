@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-saguaro-deep text-canvas/85 pt-14 pb-28 text-[15.5px]">
+    <footer className="bg-saguaro-deep text-canvas/85 pt-14 pb-14 text-[15.5px]">
       <div className="wrap grid gap-8 min-[880px]:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <h3 className="font-display text-canvas text-[19px] mb-3">Banner Gateway Emergency Department</h3>
@@ -14,6 +14,7 @@ export default function Footer() {
             <a
               className="btn-light"
               href="https://maps.google.com/?q=Banner+Gateway+Medical+Center+1900+N+Higley+Rd+Gilbert+AZ"
+              target="_blank"
               rel="noopener"
             >
               Get directions
@@ -33,7 +34,7 @@ export default function Footer() {
           <h3 className="font-display text-canvas text-[19px] mb-3">For patients</h3>
           <ul className="space-y-1.5">
             <li><Link className="text-copper-soft no-underline hover:underline" href="/resources">Patient resources</Link></li>
-            <li><Link className="text-copper-soft no-underline hover:underline" href="/feedback">Patient feedback</Link></li>
+            <li><Link className="text-copper-soft no-underline hover:underline" href="/community-resources">Community resources</Link></li>
             <li><Link className="text-copper-soft no-underline hover:underline" href="/contact">Contact &amp; directions</Link></li>
           </ul>
         </div>

@@ -45,17 +45,21 @@ export default function Testimonials({ compact = false }: { compact?: boolean })
           </motion.figure>
         </AnimatePresence>
       </div>
-      <div className="flex gap-2.5 justify-center mt-6" role="tablist" aria-label="Patient comments">
+      <div className="flex justify-center mt-4" role="group" aria-label="Patient comments">
         {testimonials.map((_, i) => (
           <button
             key={i}
             aria-label={`Show comment ${i + 1} of ${testimonials.length}`}
             aria-current={i === idx}
             onClick={() => setIdx(i)}
-            className={`w-2.5 h-2.5 rounded-full transition-all ${
-              i === idx ? "bg-copper scale-[1.3]" : "bg-sand-deep hover:bg-copper-soft"
-            }`}
-          />
+            className="w-11 h-11 flex items-center justify-center group"
+          >
+            <span
+              className={`block w-2.5 h-2.5 rounded-full transition-all ${
+                i === idx ? "bg-copper scale-[1.3]" : "bg-sand-deep group-hover:bg-copper-soft"
+              }`}
+            />
+          </button>
         ))}
       </div>
     </div>

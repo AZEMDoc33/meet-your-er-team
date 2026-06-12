@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Fab from "@/components/Fab";
 import ScrollProgress from "@/components/ScrollProgress";
 import MotionProvider from "@/components/MotionProvider";
 
@@ -37,7 +36,7 @@ export const metadata: Metadata = {
     "Meet the emergency physicians and physician assistants of Banner Gateway Medical Center in Gilbert, AZ, and learn what to expect during your visit.",
   openGraph: {
     siteName: "Meet Your ER Team",
-    images: ["/photos/hero-background.png"],
+    images: ["/images/hero-gateway.jpg"],
     type: "website",
   },
   icons: { icon: "/favicon.svg" },
@@ -62,7 +61,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Header />
           <main id="main">{children}</main>
           <Footer />
-          <Fab />
         </MotionProvider>
       </body>
     </html>
